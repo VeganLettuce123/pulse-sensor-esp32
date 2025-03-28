@@ -28,17 +28,33 @@ async function getLatestPBM(){
     if (BPM > 150){
 
         bodyElement.style.background = "radial-gradient(ellipse at center,  #fff 40%,rgb(229, 27, 27) 100%)";
+
+        heartElement.className = '';
+        cardElement.className = '';
+
         heartElement.classList.add('lol-heartbeat');
         cardElement.classList.add('wiggle-movement');
     
     }else if (BPM > 100 && BPM <= 150) {
+
+        heartElement.className = '';
+        cardElement.className = '';
+
         bodyElement.style.background = "radial-gradient(ellipse at center,  #fff 60%,rgb(221, 124, 124) 100%)";
         heartElement.classList.add('racing-heartbeat');
        
     } else  if(BPM >= 60 && BPM <= 100){
+
+        heartElement.className = '';
+        cardElement.className = '';
+
        bodyElement.style.background = "radial-gradient(ellipse at center,  #fff 60%,rgb(185, 176, 176) 100%)";
        heartElement.classList.add('fast-paced-heartbeat');
     }else{
+
+        heartElement.className = '';
+        cardElement.className = '';
+
         bodyElement.style.background = "radial-gradient(ellipse at center,  #fff 60%,rgb(236, 236, 236) 100%)";
         heartElement.classList.add('normal-heartbeat');
     }
