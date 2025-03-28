@@ -1,13 +1,11 @@
 body {
     background: white;
-   
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    transition: background 0.5s ease-in-out; 
 }
 .card {
     background-color: #050000;
@@ -21,11 +19,9 @@ body {
 }
 
 .heart {
-    width: 150px;
-    height: 150px;
-    background: src no-repeat center;
+    width: 80%;
+    height: 80%;
     background-size: contain;
-    animation: heartbeat 0.7s ease-in-out infinite; ;
 }
 
 .bpm-value {
@@ -84,4 +80,3 @@ body {
 .wiggle-movement{
     animation:  shake 0.3s ease-in-out infinite;
 }
-

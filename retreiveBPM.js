@@ -21,18 +21,17 @@ async function getLatestPBM(){
         return;
     }
 
-    const BPM = data[0].value
+    const BPM = data[0].value;
     
     bpm.textContent = BPM;
 
-    heartElement.className = '';
-    cardElement.className = '';
+    
+    heartElement.classList.remove('lol-heartbeat', 'racing-heartbeat', 'fast-paced-heartbeat', 'normal-heartbeat');
+    cardElement.classList.remove('wiggle-movement');  
 
     if (BPM > 150){
 
         bodyElement.style.background = "radial-gradient(ellipse at center,  #fff 40%,rgb(229, 27, 27) 100%)";
-
-    
 
         heartElement.classList.add('lol-heartbeat');
         cardElement.classList.add('wiggle-movement');
@@ -44,19 +43,14 @@ async function getLatestPBM(){
        
     } else  if(BPM >= 60 && BPM <= 100){
 
-
        bodyElement.style.background = "radial-gradient(ellipse at center,  #fff 60%,rgb(185, 176, 176) 100%)";
        heartElement.classList.add('fast-paced-heartbeat');
     }else{
-
-    
         bodyElement.style.background = "radial-gradient(ellipse at center,  #fff 60%,rgb(236, 236, 236) 100%)";
         heartElement.classList.add('normal-heartbeat');
     }
 }
 
-
-setInterval(getLatestPBM, 3500);
-
 getLatestPBM();
 
+setInterval(getLatestPBM, 3500);
